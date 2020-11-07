@@ -1,3 +1,10 @@
+server '52.47.203.29', user: 'ubuntu', roles: %w{app db web}
+set :ssh_options, {
+  forward_agent: true,
+  auth_methods: %w{publickey},
+  keys: %w{/Users/ingemarandrade/server-keys/trackerr-aws-key-pair.pem}
+}
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
