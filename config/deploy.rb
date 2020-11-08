@@ -10,6 +10,9 @@ set :branch, 'main'
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
 set :linked_files, %w{config/master.key}
 
+# Fix Puma failing to start => puma stdout: bash: bundle: command not found
+append :rbenv_map_bins, 'puma', 'pumactl'
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
