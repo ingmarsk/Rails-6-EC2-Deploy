@@ -1,10 +1,3 @@
-<h1>Welcome to the Trackerr App!</h1>
-<h3>Rails 6 app deployed yo AWS EC2 with Capistrano + Puma + nginx</h3>
+<h1>Welcome Trackerr App!</h1>
+<h3>Rails 6 app deployed to AWS EC2 with Capistrano + Puma + nginx</h3>
 <h4><%= link_to 'Project source: https://github.com/ingmarsk/Trackerr', 'https://github.com/ingmarsk/Trackerr' %></h4>
-
-<ul>
-  <li>REMOTE_IP: <%= request.remote_addr %></li>
-  <li>HTTP_X_REAL_IP: <%= request.env['HTTP_X_REAL_IP'] %></li>
-  <li>REMOTE_HOST: <%= request.env['REMOTE_HOST'] %></li>
-  <li>HTTP_CLIENT_IP: <%= request.env['HTTP_CLIENT_IP'] %></li>
-</ul>
